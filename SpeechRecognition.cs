@@ -16,7 +16,7 @@ public class SpeechRecognition : MonoBehaviour
         keywords.Add("right", () => { command = "right"; });
         keywords.Add("back", () => { command = "back"; });
         keywords.Add("stop", () => { command = "stop"; });
-        keywords.Add("laugh", () => { command = "laugh"; });
+        keywords.Add("laugh", () => { command = "laugh"; }); // added laugh because left sounds like laugh
         kwR = new KeywordRecognizer(keywords.Keys.ToArray());
         kwR.OnPhraseRecognized += Keywordrecognizer_OnPhraseRecognized;
         kwR.Start();
@@ -37,7 +37,7 @@ public class SpeechRecognition : MonoBehaviour
             transform.Translate(0, 0, -.5f);
         else if (command == "left")
             transform.Translate(-.5f, 0, 0);
-        else if (command == "laugh")
+        else if (command == "laugh") // added laugh because left sounds like laugh
             transform.Translate(-.5f, 0, 0);
         else if (command == "right")
             transform.Translate(.5f, 0, 0);
