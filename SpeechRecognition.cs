@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Windows.Speech;
 using System.Linq;
 
-public class SpeechReconition : MonoBehaviour
+public class SpeechRecognition : MonoBehaviour
 {
     string command = "stop";
     KeywordRecognizer kwR;
